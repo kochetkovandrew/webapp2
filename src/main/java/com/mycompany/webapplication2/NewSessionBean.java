@@ -16,4 +16,21 @@ public class NewSessionBean implements NewSessionBeanLocal {
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+       @Override
+    public String calculateBMIString(float height, float weight) {
+        return Double.toString(calculateBMI(height, weight));
+    }
+
+    // Add business logic below. (Right-click in editor and choose
+    // "Insert Code > Add Business Method")
+
+    @Override
+    public float calculateBMI(float height, float weight) {
+        if (height != 0) {
+            return weight / (height * height);
+        } else {
+            return (float) 0.0;
+        }
+    }
+
 }

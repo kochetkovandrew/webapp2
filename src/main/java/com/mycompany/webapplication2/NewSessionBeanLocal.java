@@ -13,5 +13,6 @@ import javax.ejb.Local;
  */
 @Local
 public interface NewSessionBeanLocal {
-    
+    String calculateBMIString(float height, float weight);
+    float calculateBMI(float height, float weight);
 }

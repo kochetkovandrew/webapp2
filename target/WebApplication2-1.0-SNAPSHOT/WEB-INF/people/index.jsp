@@ -44,7 +44,7 @@
                     <td><c:out value="${person.get(\"name\")}"/></td>
                     <td><c:out value="${person.get(\"weight\")}"/></td>  
                     <td><c:out value="${person.get(\"height\")}"/></td>  
-                    <td><c:out value="${person.bmiString()}"/></td>  
+                    <td><c:out value="${person.getBMIString()}"/></td>  
                 </tr>
                 </c:forEach>
             </tbody>

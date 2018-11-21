@@ -4,9 +4,12 @@
  * and open the template in the editor.
  */
 
+import com.mycompany.webapplication2.NewSessionBeanLocal;
 import com.mycompany.webapplication2.Person;
+import javax.ejb.EJB;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Iterator;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,7 +25,9 @@ import org.javalite.activejdbc.Model;
  */
 public class PeopleIndexServlet extends HttpServlet {
 
-    
+    @EJB
+    NewSessionBeanLocal newSessionBean;
+
 //    public void init(ServletConfig config) throws ServletException {
 //        super.init(config);
 //        Base.open("org.postgresql.Driver", "jdbc:postgresql://localhost/anwendungen", "anwendungen", "anwendungen");
@@ -45,6 +50,11 @@ public class PeopleIndexServlet extends HttpServlet {
         // Base.open("org.postgresql.Driver", "jdbc:postgresql://localhost/anwendungen", "anwendungen", "anwendungen");
         LazyList<Person> people = Person.findAll();
         request.setAttribute("people", people);
+        for (Iterator<Person> i = people.iterator(); i.hasNext();) {
+            Person person = i.next();
+            person.setBMIString(newSessionBean.calculateBMIString(person.getFloat("height"), person.getFloat("weight")));
+        }
+
         // Base.close();
         request.getRequestDispatcher("/WEB-INF/people/index.jsp").forward(request, response);
     }

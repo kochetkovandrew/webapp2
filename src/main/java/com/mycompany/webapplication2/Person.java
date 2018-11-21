@@ -15,6 +15,17 @@ import org.javalite.activejdbc.annotations.Table;
 @Table("people")
 public class Person extends Model {
     
+    public String BMIString;
+    
+    public String getBMIString() {
+        return BMIString;
+    }
+    
+    public void setBMIString(String newBMIString) {
+        BMIString = newBMIString;
+    }
+
+    
     public String bmiString() {
         // float weight = Float.parseFloat((String) this.get("weight"));
         // float height = Float.parseFloat((String) this.get("height"));
