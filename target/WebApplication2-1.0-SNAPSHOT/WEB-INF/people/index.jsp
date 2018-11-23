@@ -10,15 +10,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="/WebApplication2/stylesheets/style.css"/>
-        <link rel="stylesheet" href="/WebApplication2/stylesheets/jquery.dataTables.min.css"/>
+        <link rel="stylesheet" href="/webapp2/stylesheets/style.css"/>
+        <link rel="stylesheet" href="/webapp2/stylesheets/jquery.dataTables.min.css"/>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"/>
         <link rel="javascript" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"/>
         <link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css"/>
         <link rel="javascript" href="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"/>
-        <script src="/WebApplication2/javascripts/jquery-3.3.1.min.js"></script>
-        <script src="/WebApplication2/javascripts/jquery.dataTables.min.js"></script>
-        <script src="/WebApplication2/javascripts/index.js"></script>
+        <script src="/webapp2/javascripts/jquery-3.3.1.min.js"></script>
+        <script src="/webapp2/javascripts/jquery.dataTables.min.js"></script>
+        <script src="/webapp2/javascripts/index.js"></script>
         <title>BMI Form (Web Version 2018)</title>
     </head>
     <body>
